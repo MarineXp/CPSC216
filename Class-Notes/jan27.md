@@ -12,7 +12,7 @@
 ### Example Code From Class:
 ```html
 <!DOCTYPE html>
-<html lang="en_US">
+<html lang="en">
     <head>
         <title>First Example of Class</title>
         <meta charset="UTF-8">
