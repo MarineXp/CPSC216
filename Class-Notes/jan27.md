@@ -10,7 +10,7 @@
 ---
 
 ### Example Code From Class:
-```
+```html
 <!DOCTYPE html>
 <html lang="en_US">
     <head>
