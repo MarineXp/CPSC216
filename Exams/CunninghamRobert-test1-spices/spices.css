@@ -1,0 +1,21 @@
+body {
+    background-color: #FFFFFF;
+    color: #555555;
+}
+
+header {
+    background-color: #ff9e7d;
+    color: #FFFFFF;
+}
+
+hr {
+    border-color: #ff9e7d;
+}
+
+blockquote {
+    color: #ffeccb;
+}
+
+.spices {
+    color: #5d1f1f;
+}
