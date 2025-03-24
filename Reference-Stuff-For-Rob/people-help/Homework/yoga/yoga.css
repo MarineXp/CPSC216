@@ -1,0 +1,58 @@
+body {
+    background-color: #F5F5F5;
+    color: #40407A;
+    font-family: Verdana;
+}
+
+header {
+    background-color: #80CBC4;
+    color: #40407A;
+
+    text-indent: 1em;
+    font-family: Verdana;
+    height: 110px;
+    display: flex;
+    align-items: center;
+
+    background-image: linear-gradient(to right, #80CBC4 75%, rgba(128, 203, 196, 0)), url(lilyheader.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+nav {
+    text-align: center;
+    font-weight: bold;
+    margin: 25px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+dd {
+    font-size: 90%;
+}
+
+li {
+    font-size: 90%;
+}
+
+footer {
+    background-color: #80CBC4;
+    font-style: italic;
+    font-family: Verdana;
+    text-align: center
+}
+
+.topimage {
+    float: right;
+    width:auto;
+    height: 100%;
+    margin-left: 1em;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
