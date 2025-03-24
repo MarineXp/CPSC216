@@ -24,6 +24,7 @@ footer {
     font-style: italic;
     font-family: Verdana;
     text-align: center;
+    clear: both;
 }
 
 nav {
