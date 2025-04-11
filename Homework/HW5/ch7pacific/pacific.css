@@ -1,0 +1,152 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Wrapper ID Selector */
+.wrapper {
+    width: 80%;
+    background-color: #90C7E3;
+    min-width: 960px;
+    max-width: 2048px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 3px #333333;
+    border: 1px solid #000033;
+    background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+}
+
+/* Body Element Selector */
+body {
+    background-color: #EAEAEA;
+    color: #555555;
+}
+
+/* Header Element Selector */
+header {
+    background-color: #002171;
+    color: #FFFFFF;
+    font-family: Georgia;
+    height: 120px;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 3em;
+}
+
+/* H1 Element Selector */
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3em;
+    letter-spacing: 0.25em;
+}
+
+/* Nav Element Selector */
+nav {
+    font-weight: bold;
+    padding: 1.5em;
+    font-size: 120%;
+    float: left;
+    width: 160px;
+}
+
+/* Homehero ID Selector */
+.homehero {
+    height: 300px;
+    background-image: url(coast2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    margin-left: 190px;
+}
+
+/* Yurthero ID Selector */
+.yurthero {
+    height: 300px;
+    background-image: url(yurt.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    margin-left: 190px;
+}
+
+/* Trailhero ID Selector */
+.trailhero {
+    height: 300px;
+    background-image: url(trail.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    margin-left: 190px;
+}
+
+/* Main Element Selector */
+main {
+    background-color: #FFFFFF;
+    margin-left: 190px;
+    padding: 1px 20px 20px 30px;
+    display: block;
+    overflow: auto;
+}
+
+/* Section Element Selector */
+section {
+    float: left;
+    width: 33%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+/* Main UL Selector */
+main ul {
+    list-style-image: url(marker.gif);
+}
+
+/* Footer Element Selector */
+footer {
+    color: #555555;
+    font-size: 75%;
+    font-style: italic;
+    font-family: Georgia;
+    text-align: center;
+    padding: 2em;
+    margin-left: 190px;
+    background-color: #FFFFFF;
+}
+
+/* Nav UL Selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+/* Nav Hyperlink Styles */
+nav a:link {
+    color: #5C7FA3;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: #344873;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #A52A2A;
+    text-decoration: none;
+}
+
+/* Header Hyperlink Styles */
+header a:link, header a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #90C7E3;
+    text-decoration: none;
+}
