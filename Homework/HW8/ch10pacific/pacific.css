@@ -1,0 +1,288 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Wrapper ID Selector */
+#wrapper {
+    background-color: #90C7E3;
+    background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+}
+
+/* Body Element Selector */
+body {
+    background-color: #EAEAEA;
+    color: #555555;
+}
+
+/* Header Element Selector */
+header {
+    background-color: #002171;
+    color: #FFFFFF;
+    font-family: Georgia;
+    text-align: center;
+}
+
+/* H1 Element Selector */
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.25em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* H2 Element Selector */
+h2 {
+    color: #3399CC;
+}
+
+/* H3 Element Selector */
+h3 {
+    color: #002171;
+}
+
+/* Nav Element Selector */
+nav {
+    font-weight: bold;
+    padding: 0;
+    font-size: 120%;
+    text-align: center;
+}
+
+/* Nav LI Selector */
+nav li {
+    border-bottom: 1px solid #000033;
+}
+
+/* Homehero ID Selector */
+#homehero {
+    height: 300px;
+    background-image: url(coast2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Yurthero ID Selector */
+#yurthero {
+    height: 300px;
+    background-image: url(yurt.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Trailhero ID Selector */
+#trailhero {
+    height: 300px;
+    background-image: url(trail.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Main Element Selector */
+main {
+    background-color: #FFFFFF;
+    padding: 1px 20px 20px 30px;
+    display: block;
+    overflow: auto;
+}
+
+/* Main UL Selector */
+main ul {
+    list-style-image: url(marker.gif);
+}
+
+/* Footer Element Selector */
+footer {
+    color: #555555;
+    font-size: 75%;
+    font-style: italic;
+    font-family: Georgia;
+    text-align: center;
+    padding: 2em;
+    background-color: #FFFFFF;
+}
+
+/* Nav UL Selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+/* Nav Hyperlink Styles */
+nav a:link {
+    color: #5C7FA3;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: #344873;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #A52A2A;
+    text-decoration: none;
+}
+
+/* Header Hyperlink Styles */
+header a:link, header a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #90C7E3;
+    text-decoration: none;
+}
+
+/* Table Element Selector */
+table {
+    border: 2px solid #3399CC;
+    border-collapse: collapse;
+}
+
+/* Table Cells Selector */
+td, th {
+    padding: 0.5em;
+    border: 2px solid #3399CC;
+}
+
+/* Center TD Content */
+td {
+    text-align: center;
+}
+
+/* Text Class Selector */
+.text {
+    text-align: left;
+}
+
+/* Alternate-Row Background Color */
+tr:nth-of-type(odd) {
+    background-color: #F5FAFC;
+}
+
+@media (min-width: 600px) {
+    /* Nav UL Selector */
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    /* Nav LI Selector */
+    nav li {
+        border-bottom: none;
+    }
+
+    /* Section Element Selector */
+    section {
+        margin-left: 2em;
+        margin-right: 2em;
+        flex: 1;
+    }
+
+    /* Form Selector */
+    form {
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        gap: 1em;
+        width: 60%;
+        max-width: 30em;
+    }
+
+    /* Submit button styling */
+    form input[type="submit"] {
+        grid-column: 2;
+        width: 9em;
+        justify-self: center;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Flow Class Selector */
+    .flow {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Wrapper ID Selector */
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        border: 1px solid #00008B;
+        box-shadow: 3px 3px 3px #00008B;
+    }
+
+    /* Nav Element Selector */
+    nav {
+        text-align: left;
+        padding-left: 1em;
+    }
+
+    @supports (display: grid) {
+        /* Nav UL Selector */
+        nav ul {
+            flex-direction: column;
+            padding-top: 1em;
+        }
+
+        /* Grid Area Assignments */
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .hero {
+            grid-area: hero;
+        }
+
+        /* Wrapper ID Selector */
+        #wrapper {
+            display: grid;
+            grid-template-areas:
+                "header  header"
+                "nav     hero"
+                "nav     main"
+                "nav  footer";
+            grid-template-columns: 180px 1fr;
+        }
+    }
+}
+
+/* Form Element Selector */
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* Input and textarea styling */
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+}
+  
