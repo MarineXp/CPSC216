@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Smart Irrigation Solutions :: How It Works</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="format.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1><a href="index.html">Smart Irrigation Solutions</a></h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><b>Home</b></a></li>
+                    <li><a href="about.html"><b>About The Project</b></a></li>
+                    <li><a href="works.html"><b>How It Works</b></a></li>
+                    <li><a href="technical.html"><b>Technical Specifications</b></a></li>
+                    <li><a href="software.html"><b>Software Installation</b></a></li>
+                    <li><a href="suggestions.html"><b>Installation Suggestions</b></a></li>
+                    <li><a href="futureupdates.html"><b>Future Updates/Releases</b></a></li>
+                    <li><a href="contact.html"><b>Contact</b></a></li>
+                </ul>
+            </nav>
+            <div id="howhero" class="hero"></div>
+            <main>
+                <h2>How It Works</h2>
+                <div style="text-align: center;">
+                    <img src="images/systemdiagram.png" alt="System Diagram" width="600" height="400">
+                    <h3>Figure 1: System Diagram</h3>
+                    <p>The system design overview, as seen in Figure 1, consists of two parts: the left side being the main outside system and the right for the user interface. 
+                        Each sensor's inputs and the 9-volt rechargeable battery supply are on the left side. 
+                        The main system Arduino serves as the central microcontroller for the system. 
+                        The main Arduino is responsible for interfacing with the sensor, data processing, and controlling the watering system. 
+                        This enables reading sensor inputs, data conversion, and algorithm execution. 
+                        The watering system depends on the user's need to implement a DC pump or a solenoid water valve. 
+                        If using a solenoid valve, it is required to be powered by a 12-volt power supply. 
+                        Wireless connection between the main system Arduino and the user interface Arduino is achieved through Bluetooth modules to communicate for remote control and monitorization.
+                        The code and calculations node establishes communication between sensors and output devices to record sensor data over time and create visual trends for user insight. 
+                        Processing this data determines the timing and duration of watering cycles. 
+                        In the user interface, the input is what the user manually adjusts settings, such as watering schedules or sensor thresholds. 
+                        The user interface output is the displayed data and real-time sensor readings.
+                    </p>
+                </div>
+            </main>
+            <footer>
+                <p>Copyright &copy; 2025 TOR & Robert Cunningham<br>
+                    <a href="mailto:robert.cunningham.21@cnu.edu">robert.cunningham.21@cnu.edu</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

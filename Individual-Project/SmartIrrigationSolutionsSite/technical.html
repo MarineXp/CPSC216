@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Smart Irrigation Solutions :: Technical Specifications</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="format.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1><a href="index.html">Smart Irrigation Solutions</a></h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><b>Home</b></a></li>
+                    <li><a href="about.html"><b>About The Project</b></a></li>
+                    <li><a href="works.html"><b>How It Works</b></a></li>
+                    <li><a href="technical.html"><b>Technical Specifications</b></a></li>
+                    <li><a href="software.html"><b>Software Installation</b></a></li>
+                    <li><a href="suggestions.html"><b>Installation Suggestions</b></a></li>
+                    <li><a href="futureupdates.html"><b>Future Updates/Releases</b></a></li>
+                    <li><a href="contact.html"><b>Contact</b></a></li>
+                </ul>
+            </nav>
+            <div id="techhero" class="hero"></div>
+            <main>
+                <h2>The Brains of the Operation</h2>
+                <div style="text-align: center;">
+                    <img src="images/arduinofigure.png" alt="Arduinio Diagram" width="600" height="500">
+                    <h3>Figure 1: Arduino Uno Rev3 Pinout Diagram</h3>
+                    <p>Our system uses two Arduino Uno Rev3s. 
+                        One Arduino is used to connect all of the sensors and valves together. 
+                        This Arduino is called the slave arduino and is set up near the plants.
+                        This is what is going to gather the majority of the information needed. 
+                        The other Arduino is called the master arduino and is used to allow us to receive and display the information gathered from our system to a location located away from the system such as in the user's house. 
+                        We chose the Arduino Uno Rev3 to be the microcontroller we use because it has multiple digital input ports to allow us to connect our sensor to it and lets us connect our bluetooth modules to it so we can transmit and receive data between the Arduinos. 
+                        It also requires a minimal amount of power to operate which allows for our system to operate for longer periods of time without needing to replace the batteries. 
+                        Figure 1 shows a diagram of the pinouts for the Arduino.
+                    </p>
+                </div>
+                <hr>
+                <h2>Inner Valve Workings</h2>
+                <div style="text-align: center;">
+                    <img src="images/solenoid.png" alt="Solenoid Diagram" width="600" height="400">
+                    <h3>Figure 2: Solenoid Diagram</h3>
+                    <p>The solenoid valve in Figure 2 controls the flow of water throughout the system automatically. 
+                        We chose to use solenoid valves in our system because they require minimal energy to function. 
+                        The solenoid valve can be connected either to a faucet or a DC pump, depending on whichever the user has the system connected to. 
+                        Collecting data from the sensors will allow the solenoid valve to determine when to supply and cut off water to the system. 
+                        If we were to expand the scope of the system, the solenoid valves would be used to control specific sections of the system. 
+                        This would allow the solenoid valves to water the section they cover independently from the rest of the system. 
+                        In the wiring diagram for the solenoid valve shown in Figure 2 we are using a reverse bias diode in parallel with the solenoid valve because when switching the solenoid on and off it creates a large change in voltage which causes our battery to spark. 
+                        The diode is there to absorb the voltage spike by providing a low resistance pathway for the current to travel when the circuit is switched off. 
+                        We also are using a MOSFET transistor which is acting as our switch for the solenoid. 
+                        By using a transistor it allows for us to control the flow of current throughout the circuit. 
+                        By controlling the current in the circuit it allows us to easily control when the solenoid valve is on and off. 
+                        The solenoid valve requires 9V to operate. 
+                        However, when pressure is already built up against the solenoid valve more power is required to operate which will require us to use a separate power supply to operate the valve. 
+                        The power supply we use to power the solenoid valve is a 12V battery. 
+                    </p>
+                </div>
+                <hr>
+                <h2>Soil Moisture Sensors</h2>
+                <div style="text-align: center;">
+                    <img src="images/soilfigure.png" alt="Soil Diagram" width="400" height="300">
+                    <h3>Figure 3: Soil Moisture Sensor Wiring Diagram</h3>
+                    <p>Soil moisture sensors in Figure 3 are used to determine the soil moisture level in our system. 
+                        The soil moisture sensors will allow us to determine whether the plants are sufficiently watered. 
+                        The information that will be gathered from this sensor will be the main component in controlling the watering system. 
+                        The soil moisture sensor will be located in the soil with the plants to make accurate measurements. 
+                        The soil moisture sensor will display the information it gathered so that the user can monitor whether or not the proper amount of water is being supplied to the plants by our system. 
+                        Our system uses two soil moisture sensors per node to more accurately determine the soil moisture and increase the size of the environment that our system will manage. 
+                        The soil moisture sensor reads a voltage, which determines the soil's moisture level. 
+                        It functions by having two conductive plates that form a capacitor. 
+                        This allows the sensors to determine if there is a change in the dielectric constant of the soil. 
+                        An increase in the dielectric constant increases the capacitance, which decreases the voltage read by the sensor. 
+                        Since dry soil has a lower dielectric constant than wet soil, the sensor can distinguish between dry and wet soil. 
+                        We chose to use the VH400-5M soil moisture sensor because it is waterproof, requires minimal power, and gives precise measurements.
+                    </p>
+                </div>
+                <hr>
+                <h2>Photoelectric Sensor</h2>
+                <div style="text-align: center;">
+                    <img src="images/photofigure.png" alt="Photoelectric Diagram" width="400" height="350">
+                    <h3>Figure 4: Photoelectric Sensor Wiring Diagram</h3>
+                    <p>The photoelectric sensor shown in Figure 4 is placed on a raised bed and connected to the main system Arduino. 
+                        This sensor will measure ambient light levels and intensity, thus helping determine the time of day and whether plants receive adequate sunlight. 
+                        It also assists in avoiding a watering cycle during high evaporation periods, like midday, to compensate for moisture loss or during the night time to avoid potential mold from forming.
+                    </p>
+                </div>
+                <hr>
+                <h2>Water Sensor</h2>
+                <div style="text-align: center;">
+                    <img src="images/watersensor.png" alt="Photoelectric Diagram" width="400" height="350">
+                    <h3>Figure 5: Water Sensor and Water Analyzer Wiring Diagram</h3>
+                    <p>The raindrop sensor, as seen in Figure 5, determines whether there is water inside of our enclosure. 
+                        This allows us to determine if our enclosure has a leak causing liquid to potentially short circuit our system. 
+                        The water sensor allows us to shut down our system if it detects water inside the enclosure. 
+                        Additionally, the sensor contains a water analyzer with a shield converter that relays the information gathered from the shield converter to the rest of the system. 
+                        It does this by determining if there was a short circuit from water detected on the shield converter. 
+                        It then outputs either a 1 if there is water or a 0 if there is no water. 
+                        This information is then given to the watering system to determine whether it needs to stop or delay the watering process.
+                    </p>
+                </div>
+                <hr>
+                <h2>Bluetooth Modules</h2>
+                <div style="text-align: center;">
+                    <img src="images/hcfigure.png" alt="Bluetooth Module Diagram" width="400" height="300">
+                    <h3>Figure 6: HC-05 Bluetooth Module Diagram</h3>
+                    <p>The Bluetooth modules allow us to transmit data from the garden and receive that data at another location. 
+                        This allows us to create a user interface that can be wirelessly connected to the system so the user can monitor the status of the plants without having to be near the garden. 
+                        One module inside our enclosure is connected to our slave Arduino, which will be used as our transmitter to send the collected data. 
+                        The other module is in a smaller container connected to our master Arduino. 
+                        It is used as our receiver, allowing the user to connect to our system with their computer to display the received information. 
+                        These Bluetooth modules can communicate with each other in a range of 108 feet. 
+                        We chose to use a Bluetooth connection because of the ease of communication between the modules and their ability to transmit and receive without needing other connections, such as a Wifi connection or a wired connection. 
+                        Figure 6 shows the Bluetooth module diagram.
+                    </p>
+                </div>
+                <hr>
+                <h2>Watering System Alternative</h2>
+                <div style="text-align: center;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Design Alternative</th>
+                                <th>Capabilities</th>
+                                <th>Advantages</th>
+                                <th>Drawback</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DC Motor Pump and Solenoid Water Valve</td>
+                                <td class="text">Maximum flexibility allows the user to adapt the system to both pressurized (via the solenoid valve) and non-pressurized (via the pump) water sources.</td>
+                                <td class="text">The advantage of having this setup would be its versatility for diverse environments and scenarios.</td>
+                                <td class="text">The drawback of this setup is the price of buying the unit, and it is a more complex setup if one attempts to use both.</td>
+                            </tr>
+                            <tr>
+                                <td>Just the Solenoid Water Valve</td>
+                                <td class="text">It is ideal for pressurized water sources, such as hoses or outdoor faucets.</td>
+                                <td class="text">It is more straightforward, energy-efficient, and cost-effective as no pump is required.</td>
+                                <td class="text">Limited to situations where a pressurized water source is available, unsuitable for tank-fed systems.</td>
+                            </tr>
+                            <tr>
+                                <td>Just the DC Motor Pump</td>
+                                <td class="text">Suitable for unpressurized water sources, such as barrels or tanks, by actively delivering water through the system.</td>
+                                <td class="text">Enables the system to function in off-grid setups or areas without pressurized water.</td>
+                                <td class="text">Consumes more power, and complexity increases slightly due to the need for pump control.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Table 1: System Configuration Option for the Smart Irrigation System Water Supply</h3>
+                    <p>An alternative to the water system would be to have a separate DC pump and valve instead of having them both. 
+                        With this alternative, we would still have valves in our system to determine where the water goes, but we would not have a valve controlling the water coming into the system. 
+                        This would decrease the cost for users because it would allow them to buy either the DC pump if they do not have a faucet or they would be able to buy the valve if they had a faucet. 
+                        This could also lower the cost of the system since we would not need both the DC pump and the valve for every system we make. 
+                        This alternative is very feasible; it would just require extra programming so the system knows whether or not the watering system is using a valve or a DC pump. 
+                        This alternative is user-friendly because it allows the user to buy what watering system would suit them best, which would save the user money. 
+                        This alternative watering system would be less reliable because having both the DC pump and the valve decreases the risk of a component malfunctioning and flooding the garden. 
+                        This alternative could increase the manufacturability of the system since there would be one less component to add when creating the watering system. 
+                        No ethical issues would appear if we used this alternative watering system. 
+                        The comparisons between each design alternative can be seen in Table 1.
+                    </p>
+                </div>
+            </main>
+            <footer>
+                <p>Copyright &copy; 2025 TOR & Robert Cunningham<br>
+                    <a href="mailto:robert.cunningham.21@cnu.edu">robert.cunningham.21@cnu.edu</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
