@@ -411,3 +411,65 @@ button {
     line-height: 1.6;
     color: #333333;
 }
+
+#updates {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#updates h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #002171;
+}
+
+.update-card {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    width: 85%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.update-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.update-card h3 {
+    margin-top: 0;
+    color: #002171;
+}
+
+.update-card p {
+    font-size: 1.1em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.9em;
+    border-radius: 20px;
+    color: #ffffff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.status.planned {
+    background-color: #0288d1;
+}
+
+.status.in-development {
+    background-color: #ffa000;
+}
+
+.status.concept {
+    background-color: #7b1fa2;
+}
